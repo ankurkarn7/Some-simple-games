@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Tic tac toe game</title>
+        <link rel="icon" href="yes/game.png">
+        <link rel="stylesheet" href="css/tic tac game.css">
+    </head>
+    <body>
+        <center>
+        <p class="heading">TIC TAC TOE</p>
+        <div class="adjust">
+            <div>
+                <p class="score">Player 1</p>
+                <p id="player1" class="score">0</p>
+            </div><div>
+        <table>
+            <tr>
+                <td class="right bottom" id="one" onclick="choice(0)"></td>
+                <td class="left right bottom" id="two" onclick="choice(1)"></td>
+                <td class="left bottom" id="three" onclick="choice(2)"></td>
+            </tr>
+            <tr>
+                <td class="top right bottom" id="four" onclick="choice(3)"></td>
+                <td class="top right bottom left" id="five" onclick="choice(4)"></td>
+                <td class="top left bottom" id="six" onclick="choice(5)"></td>
+            </tr>
+            <tr>
+                <td class="top right" id="seven" onclick="choice(6)"></td>
+                <td class="left top right" id="eight" onclick="choice(7)"></td>
+                <td class="left top" id="nine" onclick="choice(8)"></td>
+            </tr>
+        </table>
+        </div><div>
+            <p class="score">Player 2</p>
+            <p id="player2" class="score">0</p>
+        </div>
+    </div>
+        <p id="status">Play now</p>
+        <button id="refresh">Reset all</button>
+        </center>
+        <!-- <script src="js/tic tac game 1.js"></script>--> <!--for words -->
+        <script src="js/tic tac game 2.js"></script> <!--for image-->
+    </body>
+</html>

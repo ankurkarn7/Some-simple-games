@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>toss</title>
+        <style>
+            button{
+                background-color:blueviolet;
+                height:3rem;
+                width:400px;
+            }
+            p{
+                background-color:green;
+                font-size:3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <button id="tossCoin">Toss(Coin)</button>
+        <p>-</p>
+        <br><br>
+        <button id="tossColor">Toss(Color)</button>
+        <p>-</p>
+        </center>
+        <script>
+            let tossCoin = document.getElementById('tossCoin');
+            let tossColor = document.getElementById('tossColor')
+            let p = document.querySelectorAll('p')
+            function randomCoin() {
+                const option = ['head','tail'];
+                var num = Math.floor(Math.random() * 2);
+                p[0].innerText = option[num];
+            }
+            function randomColor() {
+                const option = ['white','black'];
+                var num = Math.floor(Math.random() * 2);
+                p[1].innerText = option[num];
+            }
+            tossCoin.addEventListener('click',randomCoin);
+            tossColor.addEventListener('click',randomColor);
+        </script>
+    </body>
+</html>
