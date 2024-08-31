@@ -19,7 +19,7 @@ td:hover{
     background-color:rgb(151, 151, 151);
 }
 .a1{
-    background-image:url(white%20rook.png);
+    background-image:url(../white rook.png);
     background-repeat:no-repeat;
     background-size:cover;
 }
