@@ -18,11 +18,11 @@ function resetGame() {
 var i = 0;
 function choice(j){
     if(i%2 == 0){
-    td[j].style.backgroundImage="url('yes/cross.jpg')";
+    td[j].style.backgroundImage="url('cross.jpg')";
     td[j].style.backgroundSize  = 'cover'
     td[j].value= i}
     else{
-    td[j].style.backgroundImage="url('yes/zero.jpg')";
+    td[j].style.backgroundImage="url('zero.jpg')";
     td[j].style.backgroundSize = 'cover';
     td[j].value = i;
     }
