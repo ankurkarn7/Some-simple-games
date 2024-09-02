@@ -3,7 +3,8 @@ let compScore = 0
 let userscore = document.querySelector(".myScore")
 let compscore = document.querySelector(".compScore")
 let display = document.querySelector(".display")
-let computer = document.querySelector(".computer")
+let uChoice = document.querySelector(".uChoice")
+let cChoice = document.querySelector(".cChoice")
 let genCompChoice = () => {
     arr = ["rock", "paper", "scissor"]
     let randIdx = Math.floor(Math.random() * 3)
@@ -23,7 +24,6 @@ const result = (userWin, userChoice, compChoice) => {
         compScore++;
         compscore.innerText = compScore;
     }
-    computer.innerText = `Computer chose ${compChoice}`;
 }
 
 const playgame = (userChoice) => {
@@ -33,15 +33,44 @@ const playgame = (userChoice) => {
     if (userChoice == compChoice) {
         display.innerText = "it's a draw"
         display.style.backgroundColor = "skyblue";
-        computer.innerText = `Computer chose ${compChoice}`;
+        if(userChoice == "rock"){
+            uChoice.src = 'rock.png';
+            cChoice.src = 'rock1.png';
+        }
+        if(userChoice == "paper"){
+            uChoice.src = 'paper.png';
+            cChoice.src = 'paper1.png'
+        }
+        if(userChoice == "scissor"){
+            uChoice.src = 'scissor.png';
+            cChoice.src = 'scissor1.png';
+        }
     } else {
         let userWin = true
         if (userChoice == "rock") {
-            userWin = compChoice == "paper"?false:true;
+            uChoice.src = 'rock.png';
+            if(compChoice == "paper"){
+                userWin = false;
+                cChoice.src = 'paper1.png';
+            } else{
+                cChoice.src = 'scissor1.png';
+            }
         } else if(userChoice == "paper") {
-            userWin = compChoice == "scissor" ? false:true;
+            uChoice.src = 'paper.png';
+            if(compChoice == "scissor"){
+                userWin = false;
+                cChoice.src = 'scissor1.png';
+            } else{
+                cChoice.src = 'rock1.png';
+            }
         } else if(userChoice == "scissor"){
-            userWin = compChoice == "rock" ? false: true;
+            uChoice.src = 'scissor.png';
+            if(compChoice == "rock"){
+                userWin = false;
+                cChoice.src = 'rock1.png';
+            } else{
+                cChoice.src = 'paper1.png';
+            }
         }
         result(userWin, userChoice, compChoice)
     }
