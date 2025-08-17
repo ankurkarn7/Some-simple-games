@@ -31,12 +31,13 @@
                 p[0].innerText = option[num];
             }
             function randomColor() {
-                const option = ['white','black'];
-                var num = Math.floor(Math.random() * 2);
+                const option = ['white','black','blue','red','green','yellow'];
+                var num = Math.floor(Math.random() * 6);
                 p[1].innerText = option[num];
             }
             tossCoin.addEventListener('click',randomCoin);
             tossColor.addEventListener('click',randomColor);
         </script>
     </body>
+
 </html>
